@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro %}
+
+{% block content %}
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Navbar</a>
+  <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search Movie" aria-label="Search" name="movie_query">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+</nav>
+<section class="outer">
+  <div class="outer">
+    <h2 class="text-danger bold text-center">popular movies</h2>
+    <ul class="row">
+      {{ macro.displayMovieList(popular_movies) }}
+    </ul>
+    <h2 class= " text-success">Upcoming Movies</h2>
+    <ul class="row">
+      {{ macro.displayMovieList(upcoming_movie) }}
+    </ul>
+    <h2 class= " text-warning">now showing</h2>
+    <ul class="row">
+      {{ macro.displayMovieList(now_showing_movie) }}
+    </ul>
+  </div>  
+</section>
+{% endblock content %}
+     
+
+    

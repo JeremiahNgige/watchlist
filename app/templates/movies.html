@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container m-3">
+        <div class="row">
+            <div class="col-md-5 posterPath card shodow-lg p-5 rounded" style="background: url({{movie.poster}}) no-repeat center center;
+                        background-size: cover; height: 500px;"></div>
+            <div class="col-md-5 p-5 posterPath" > 
+                <h2 class="text-primary ">{{ movie.title }}</h2>
+                <p class="overview text-dark"> {{ movie.overview }}</p>
+                <p class="ratings text-success"> <b> {{ movie.vote_average }}</b> - <i>{{ movie.vote_count}} votes </i> </p>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

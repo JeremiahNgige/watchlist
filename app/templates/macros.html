@@ -1,0 +1,11 @@
+{% macro displayMovieList(movie_list) %}
+    {% for movie in movie_list  %}
+
+    <li class=" col-md-4 col col-md-4 card shadow-md  p-5 text-center m-3 rounded" style="background: url({{movie.poster}}) center center no-repeat;
+              background-size: cover; height:400px;">
+              <a href="/movie/{{ movie.id }}" class="stretched-link">
+               
+            </a>
+        </li>
+    {% endfor %}
+{% endmacro %}
